@@ -1,0 +1,20 @@
+---
+title: "Map Assignment"
+author: "R. A. Whitehurst"
+date: "6/19/2019"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## Sample Map
+
+```{r}
+require(leaflet)
+map <- leaflet() %>%
+  addTiles() %>%
+  addMarkers(lat=33.4265, lng=-111.8059, popup="My Birthplace")
+map
+```
